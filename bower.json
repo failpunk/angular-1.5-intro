@@ -1,0 +1,21 @@
+{
+  "name": "es6-presentation",
+  "version": "0.0.1",
+  "description": "Quick overview of some of the fetures of ES6",
+  "main": "index.html",
+  "authors": [
+    "Cameron Manavian",
+    "Justin Vencel"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reveal.js": "~3.1.0"
+  }
+}
