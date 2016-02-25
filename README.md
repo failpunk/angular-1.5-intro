@@ -1,5 +1,7 @@
 # Say Hello To Angular 1.5
 
+> My Angular 1.5 presentation at the SoCal Angular meetup.
+
 ## Installation the Presentation
 >       $ bower install
 
