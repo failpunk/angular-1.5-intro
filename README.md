@@ -1,9 +1,8 @@
-# ES6 Presentation
-[View presentation here](http://etalx.com/es6-presentation/)
+# Say Hello To Angular 1.5
 
-## Install
+## Installation the Presentation
 >       $ bower install
 
-## Run
-Load ./index.html via server or directly from file into browser
-    
+## Launch the presentation
+Load `index.html` directly from your browser
+>       $ open index.html
