@@ -28,6 +28,23 @@
         document.getElementsByTagName('head')[0].appendChild(link);
     </script>
 
+    <style>
+        img {
+            border: none !important;
+            background: none !important;
+        }
+
+        .slides {
+            width: 960px !important;
+            height: 960px !important;
+            margin-top: 0 !important;
+        }
+
+        .reveal pre code {
+            max-height: inherit;
+        }
+    </style>
+
     <!--[if lt IE 9]>
     <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
     <![endif]-->
@@ -39,9 +56,11 @@
 
         <!-- Any section element inside of this container is displayed as a slide -->
         <div class="slides">
-            <section>
-                <h1>Say Hello To Angular 1.5</h1>
 
+
+
+            <section>
+                <h1>Say Hello to Angular 1.5</h1>
                 <h4>...the newest release</h4>
 
                 <p>
@@ -50,45 +69,358 @@
                 </small>
                 </p>
             </section>
-            
 
 
-            <section>
-                <section>
-                    <h2>Arrow</h2>
+<!-- ////////////////////// -->
 
-                    <p>
-                        I make anonymous functions shorter!
-                    </p>
 
-                    <h5>ES6</h5>
+<section>
+    <section>
+        <h2>Highlights</h2>
 
-                    <pre><code>
-                        var timeSpent = 0;
+        <ul>
+            <li>Component Helper Method</li>
+            <li>Lazy Loading</li>
+            <li>One-Way Binding</li>
+            <li>Multiple Slot Transclusion</li>
+            <li>Ng-Animate-Swap</li>
+            <li>$onInit</li>
+        </ul>
 
-                        setTimeout(() => timeSpent + 1, 3000);
-                    </code></pre>
+    </section>
 
-                    <h5>ES5</h5>
-                    <pre><code>
-                var timeSpent = 0;
 
-                setTimeout(function () {
-                    return timeSpent + 1;
-                }, 3000);
-            </code></pre>
-                </section>
+  <section>
 
-            </section>
+      <h2>Security Improvements</h2>
+
+      <p>Contains updated security and code base fixes from the Google security team</p>
+
+      <img src="security.png" alt="">
+  </section>
+
+
+</section>
+
+
+<!-- ////////////////////// -->
+
+
+<section>
+
+    <section>
+
+        <h2>New Component Method</h2>
+
+        <ul>
+            <li>Simplified form of directive creation.</li>
+            <li>Advocates the best practices and common default behaviours.</li>
+            <li>Closer to Angular 2 syntax.</li>
+        </ul>
+
+    </section>
+
+
+<!-- ////////////////////// -->
+
+
+    <section>
+        <h3>function</h3>
+
+<pre><code>
+    module.directive("myDirective", function directive() {
+        return {
+            // directive definition object
+        };
+    });
+
+</code></pre>
+
+        <h3>object</h3>
+
+<pre><code>
+    module.component("myComponent",  {
+        // component options
+    });
+
+</code></pre>
+    </section>
+
+
+<!-- ////////////////////// -->
+
+
+    <section>
+        <h2>Bindings</h2>
+
+<pre><code>
+    module.directive("myDirective", function directive() {
+        return {
+            scope: {},
+            bindToController: {
+                input: '='
+            }
+        };
+    });
+
+</code></pre>
+<pre><code>
+    module.component("myComponent",  {
+        bindings: {
+            input: '='
+        }
+    });
+
+</code></pre>
+
+    </section>
+
+
+<!-- ////////////////////// -->
+
+
+    <section>
+        <h2>Stateless Components</h2>
+
+<pre><code>
+    module.directive("myDirective", function directive() {
+        return {
+            scope: {},
+            bindToController: {
+                title: '@',
+                desc: '@'
+            },
+            controllerAs: '$ctrl',
+            controller: angular.noop,
+            template: `
+                <div>
+                    <h1>{{$ctrl.title}}</h1>
+                    <p>{{$ctrl.desc}}</p>
+                </div>
+            `
+        };
+    });
+
+</code></pre>
+
+
+<!-- ////////////////////// -->
+
+
+    </section>
+
+    <section>
+        <h2>Much Better...</h2>
+
+<pre><code>
+    module.component("myComponent",  {
+        bindings: {
+            title: '@',
+            desc: '@'
+        },
+        template: `
+            <div>
+                <h1>{{$ctrl.title}}</h1>
+                <p>{{$ctrl.desc}}</p>
+            </div>
+        `
+    });
+
+</code></pre>
+
+    </section>
+
+
+<!-- ////////////////////// -->
+
+
+<section>
+        <h2>Inheriting behaviour using require</h2>
+
+<pre><code>
+    module.component("myComponent",  {
+        require: {
+            parent: '^parentComponent'
+        },
+        controller: function () {
+            this.parent.foo();
+        }
+
+        // no more link function!!
+    });
+
+</code></pre>
+
+    </section>
+
+
+    <!-- ////////////////////// -->
+
+
+<section>
+        <h2>One-Way Binding</h2>
+
+<pre><code>
+    module.component("myComponent",  {
+        bindings: {
+            oneWay: '<',
+            twoWay: '='
+        },
+    });
+
+    // $watch is setup on the parent data source
+
+</code></pre>
+
+    </section>
+    
+    
+        <!-- ////////////////////// -->
+
+
+<section>
+        <h2>Upgrading to Angular 2</h2>
+
+<pre><code>
+    ng
+        .Component({
+            selector: 'my-component',
+            inputs: [
+                'title', 
+                'desc'
+            ],
+            template: `
+                <div>
+                    <h1>{{title}}</h1>
+                    <p>{{desc}}</p>
+                </div>
+            `
+        })
+        .Class({
+            constructor: function () {
+                this.count = 0;
+            },
+        });
+
+</code></pre>
+
+    </section>
+
+</section>
+
+
+
+
+
+<section>
+    
+        <!-- ////////////////////// -->
+
+
+    <section>
+        <h2>Multislot Transclusion</h2>
+
+        <p>Allows the creation of reusable components with several transclusion slots.</p>
+
+    </section>
+    
+    
+        <!-- ////////////////////// -->
+
+
+    <section>
+        
+        <h2>Simple Details</h2>
+        
+<pre><code>
+    <some-details>
+        <details-title>Some Title Text</details-title>
+        <details-body>Some Body Text</details-body>
+    </some-details>
+</code></pre>
+
+
+    </section>
+    
+    
+    <!-- ////////////////////// -->
+
+
+    <section>
+        
+        <h2>The Details Directive</h2>
+        
+<pre><code>
+    module.component("someDetails",  {
+        transclude: {
+            'title': '?detailsTitle',
+            'body': '?detailsBody',
+        },
+        template: `
+            <div>
+                <h1 ng-transclude="title">Default Title</h1>
+                <p ng-transclude="body">Default Body</p>
+            </div>
+        `
+    });
+</code></pre>
+
+
+    </section>
+    
+    
+    
+     <!-- ////////////////////// -->
+     
+     <section>
+         <h2>Lets do a demo...</h2>
+     </section>
+
+
+    <section>
+        
+        <h2>We Also Get Lazy Compilation!</h2>
+        
+        <p>This means performance gains for <code>ng-if</code> and <code>ng-switch</code></p>
+
+    </section>
+    
+</section>
+
+
+<!-- ////////////////////// -->
 
 
 
             <section style="text-align: left;">
-                <h1>THE END</h1>
+                <h2>Links and Resources</h2>
+
+                <h4>Migrating from 1.4 to 1.5</h4>
+                <p>
+                    - <a href="https://docs.angularjs.org/guide/migration">https://docs.angularjs.org/guide/migration</a>
+                </p>
+
+                <h4>Blog Posts</h4>
+                <p>
+                    - <a href="http://angularjs.blogspot.com/2016/02/angular-150-ennoblement-facilitation.html">http://angularjs.blogspot.com/2016/02/angular-150-ennoblement-facilitation.html</a>
+                </p>
 
                 <p>
-                    - <a href="https://github.com/camsjams/es6-presentation">Source</a>
+                    - <a href="http://www.codelord.net/2015/12/10/angular-1-dot-5-is-close-heres-the-interesting-parts/">http://www.codelord.net/2015/12/10/angular-1-dot-5-is-close-heres-the-interesting-parts/</a>
                 </p>
+
+                <p>
+                    - <a href="https://toddmotto.com/exploring-the-angular-1-5-component-method/">https://toddmotto.com/exploring-the-angular-1-5-component-method/</a>
+                </p>
+
+            </section>
+
+
+<!-- ////////////////////// -->
+
+
+            <section style="text-align: left;">
+                <h1>Thanks!</h1>
             </section>
 
         </div>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="transcludeApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="transclude.js"></script>
+    
+    <style>
+      body { padding: 40px;}
+      h2 { border-bottom: 1px solid #bbb; padding-bottom: 15px;}
+      details {display: block;}
+      h4 {text-transform: uppercase;}
+    </style>
+  </head>
+  <body>
+    <h2>Multi-Slot Transclusion</h2>
+    <div>
+      
+      
+      
+      
+      <some-details>
+          <details-title>Some Title Text</details-title>
+          <details-body>Here are my details</details-body>
+      </some-details>
+      
+      
+      
+      
+    </div>
+  </body>
+</html>
