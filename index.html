@@ -369,12 +369,23 @@
     </section>
     
     
+    <!-- ////////////////////// -->
+     
+     <section>
+         <h2>Default Transclusion Content</h2>
+         
+         <p>ngTransclude no longer overwrites its contents if there is no content to fill it.</p>
+     </section>
+    
     
      <!-- ////////////////////// -->
      
      <section>
          <h2>Lets do a demo...</h2>
      </section>
+     
+     
+     <!-- ////////////////////// -->
 
 
     <section>
@@ -382,6 +393,40 @@
         <h2>We Also Get Lazy Compilation!</h2>
         
         <p>This means performance gains for <code>ng-if</code> and <code>ng-switch</code></p>
+
+    </section>
+    
+</section>
+
+
+<!-- ////////////////////// -->
+     
+<section>
+    
+    <section>
+         <h2>Lifecycle Hooks</h2>
+         
+         <p>$onInit()</p>
+         
+     </section>
+
+
+    <!-- ////////////////////// -->
+
+
+    <section>
+        
+        <h2>Called When Component Is Mounted</h2>
+        
+        <pre><code>
+    function Controller() {
+        this.state = 'Not loaded';
+        
+        this.$onInit = function() {
+            this.state = 'Loaded!';
+        };
+    },
+        </code></pre>
 
     </section>
     
