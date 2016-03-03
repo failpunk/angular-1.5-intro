@@ -436,6 +436,140 @@
 <!-- ////////////////////// -->
 
 
+<section>
+    
+    <section>
+        
+        <h2>ng-animate-swap</h2>
+        
+        <p>Animate an “old” block away and animate in a “new” block via leave and enter animations respectively.</p>
+        
+    </section>
+    
+    
+    <!-- ////////////////////// -->
+    
+    
+    <section>
+        
+        <h2>ng-animate-swap</h2>
+        
+        <pre><code>
+    <div class="banner-container">
+        
+        <img 
+            ng-src="{{ image }}"
+            ng-animate-swap="image"/>
+            
+    </div>
+        </code></pre>
+        
+    </section>
+    
+    
+    <!-- ////////////////////// -->
+    
+    
+    <section>
+        
+        <h2>The CSS</h2>
+        
+        <pre><code>
+    .animate-banner.ng-enter, .animate-banner.ng-leave {
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        height:100%;
+        transition:0.5s ease-out all;
+    }
+    .animate-banner.ng-enter {
+        top:-100%;
+    }
+    .animate-banner.ng-enter-active, .animate-banner.ng-leave {
+        top:0;
+    }
+    .animate-banner.ng-leave-active {
+        top:100%;
+    }
+        </code></pre>
+        
+    </section>
+    
+    
+    <!-- ////////////////////// -->
+    
+    
+    <section>
+        
+        <h2>Use it on anything</h2>
+        
+        <pre><code>
+    <div class="user-container" ng-animate-swap="userId"></div>
+        </code></pre>
+        
+    </section>
+    
+    
+</section>
+
+<section>
+    
+    <section>
+        
+        <h2>Just a few other things</h2>
+        
+    </section>
+    
+    
+    <!-- ////////////////////// -->
+    
+    
+    <section>
+        
+        <h2>ngResource</h2>
+        
+        <p>Proper support for cancellable actions on resources, which means a $cancelRequest() method will be available on the return value of the request method.</p>
+        
+    </section>
+    
+    
+    <!-- ////////////////////// -->
+    
+    
+    <section>
+        
+        <h2>ngRoute</h2>
+        
+        <p>Any promises resolved as part of a route's resolve property are now added to the scope as a $resolve property, which saves you having to inject them into the route controller.</p>
+        
+    </section>
+    
+    
+    <!-- ////////////////////// -->
+    
+    
+    <section>
+        
+        <h2>And...</h2>
+        
+        <ul>
+            <li>You can now access the locals object that was passed to a call to $parse from inside the parsed expression, via a $locals variable.</li>
+            <li>You can provide $http configuration options of the $templateRequest service.</li>
+            <li>You can create your own custom XHR objects for the $http via the $xhrFactory service.</li>
+            <li>ngModel now provides ng-empty and ng-not-empty CSS classes.</li>
+            <li>The ngAria module is now more precise with handling of ARIA attributes and tabindex for custom controls.</li>
+            <li>Some new helpers are available on ngMock to ease testing:</li>
+        </ul>
+        
+    </section>
+    
+</section>
+
+
+<!-- ////////////////////// -->
+
+
 
             <section style="text-align: left;">
                 <h2>Links and Resources</h2>
@@ -466,6 +600,9 @@
 
             <section style="text-align: left;">
                 <h1>Thanks!</h1>
+                <br>
+                <h3>Justin Vencel</h3>
+                <h4>Angular Mangler at StudyMode.com</h4>
             </section>
 
         </div>
