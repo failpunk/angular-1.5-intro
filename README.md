@@ -2,7 +2,7 @@
 
 > My Angular 1.5 presentation at the SoCal Angular meetup.
 
-## Installation the Presentation
+## Install the Presentation
 >       $ bower install
 
 ## Launch the presentation
