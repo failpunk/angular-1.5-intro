@@ -8,3 +8,10 @@
 ## Launch the presentation
 Load `index.html` directly from your browser
 >       $ open index.html
+
+
+## Launch Component Demo
+>       $ open component.html
+
+## Launch Multi-Transclude Demo
+>       $ open transclude.html
