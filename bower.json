@@ -1,12 +1,9 @@
 {
-  "name": "es6-presentation",
-  "version": "0.0.1",
+  "name": "angular-15-presentation",
+  "version": "0.0.2",
   "description": "Quick overview of some of the fetures of ES6",
   "main": "index.html",
-  "authors": [
-    "Cameron Manavian",
-    "Justin Vencel"
-  ],
+  "author": "Justin Vencel <failpunk@gmail.com>"
   "license": "MIT",
   "ignore": [
     "**/.*",
