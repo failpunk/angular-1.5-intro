@@ -11,7 +11,7 @@ Load `index.html` directly from your browser
 
 
 ## Launch Component Demo
->       $ open component.html
+>       $ open examples/component.html
 
 ## Launch Multi-Transclude Demo
->       $ open transclude.html
+>       $ open examples/transclude.html
