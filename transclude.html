@@ -1,34 +1,45 @@
 <!doctype html>
 <html ng-app="myApp">
-  <head>
+
+<head>
+    <link rel="stylesheet" href="bower_components/semantic/dist/semantic.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script src="transclude.js"></script>
     <style>
-      h2 {
-        border-bottom: 1px solid #bbb;
-        padding-bottom: 20px;
-      }
-      details-title {
-        display: block;
-        font-size: 32px;
-      }
-      details-body {
-        display: block;
-        font-size: 20px;
-      }
-      details-footer {
-        display: block;
-        font-size: 16px;
-      }
+        .ui.container {
+            padding-top: 25px;
+        }
+        
+        h1 {
+            margin: 25px 0 5px;
+        }
+        
+        h4 {
+            margin: 0 0 50px;
+        }
     </style>
-  </head>
-  <body>
-    <h2>Multi-slot Transclusion</h2>
-    
-    <my-details>
-      <details-title>My Title</details-title>
-      <details-body>My Body</details-body>
-    </my-details>
-    
-  </body>
+</head>
+
+<body>
+    <div class="ui container">
+
+        <h1>Multi-slot Transclusion</h1>
+        <h4>Transclusion at your finger tips</h4>
+
+        <div class="ui cards">
+
+            <my-details class="card grey">
+                <details-title>Justin Vencel</details-title>
+                <details-body>Angular Mangler</details-body>
+                <details-description>Would you like Justin to speak at your next conference?</details-description>
+            </my-details>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
 </html>
