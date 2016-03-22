@@ -1,11 +1,9 @@
 {
-  "name": "angular-1.5-intro",
+  "name": "angular-15-presentation",
   "version": "0.0.2",
-  "description": "My Angular 1.5 presentation at the SoCal Angular meetup",
+  "description": "Quick overview of some of the fetures of ES6",
   "main": "index.html",
-  "authors": [
-    "Justin Vencel"
-  ],
+  "author": "Justin Vencel <failpunk@gmail.com>",
   "license": "MIT",
   "ignore": [
     "**/.*",

@@ -2,9 +2,16 @@
 
 > My Angular 1.5 presentation at the SoCal Angular meetup.
 
-## Installation the Presentation
+## Install the Presentation
 >       $ bower install
 
 ## Launch the presentation
 Load `index.html` directly from your browser
 >       $ open index.html
+
+
+## Launch Component Demo
+>       $ open component.html
+
+## Launch Multi-Transclude Demo
+>       $ open transclude.html
