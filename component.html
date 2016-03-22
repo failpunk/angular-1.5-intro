@@ -1,24 +1,43 @@
 <!doctype html>
 <html ng-app="myApp">
-  <head>
+
+<head>
+
+    <link rel="stylesheet" href="bower_components/semantic/dist/semantic.min.css">
+    <style>
+        .ui.container {
+            padding-top: 25px;
+        }
+        h1 {
+            margin: 25px 0 5px;
+        }
+        h4 {
+            margin: 0 0 50px;
+        }
+    </style>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script src="component.js"></script>
-    <link rel="stylesheet" href="todo.css">
-  </head>
-  <body>
-    <h2>Testing...</h2>
-    
-    <new
-        title="New Component"
-        description="My Description">
-    </new>
-    
-    <hr>
-    
-    <old
-        title="Old Directive"
-        description="My Description">
-    </old>
-    
-  </body>
+
+</head>
+
+<body>
+
+    <div class="ui container">
+
+        <h1>Angular 1.5 Comonents</h1>
+        <h4>Contrasting Angular component and directive methods</h4>
+        
+        <div class="ui grid">
+        
+            <new title="1.5 Component" description="The New Way"></new>
+
+            <old title="1.4 Directive" description="The Old Way"></old>    
+            
+        </div>
+
+    </div>
+
+</body>
+
 </html>

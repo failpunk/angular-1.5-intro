@@ -1,10 +1,9 @@
 {
-  "name": "es6-presentation",
-  "version": "0.0.1",
-  "description": "Quick overview of some of the fetures of ES6",
+  "name": "angular-1.5-intro",
+  "version": "0.0.2",
+  "description": "My Angular 1.5 presentation at the SoCal Angular meetup",
   "main": "index.html",
   "authors": [
-    "Cameron Manavian",
     "Justin Vencel"
   ],
   "license": "MIT",
@@ -16,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "reveal.js": "~3.1.0"
+    "reveal.js": "~3.1.0",
+    "semantic": "semantic-ui#^2.1.8"
   }
 }
