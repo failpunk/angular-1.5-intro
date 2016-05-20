@@ -4,18 +4,18 @@ angular.module('myApp', [])
         title: '@',
         description: '@'
     },
-    template: [
-        '<div class="ui card green">',
-            '<div class="content">',
-                '<div class="header">{{$ctrl.title}}</div>',
-                '<div class="meta">{{$ctrl.description || "default description"}}</div>',
-                '<div class="description">',
-                    '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                        'Ut enim ad minim veniam, quis nostrud exercitation.</p>',
-                '</div>',
-            '</div>',
-        '</div>'
-    ].join('')  
+    template:
+        `<div class="ui card green">
+            <div class="content">
+                <div class="header">{{$ctrl.title}}</div>
+                <div class="meta">{{$ctrl.description || "default description"}}</div>
+                <div class="description">
+                    <p>
+                        Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.
+                    </p>
+                </div>
+            </div>
+        </div>`
   });
   
   
@@ -29,18 +29,18 @@ angular.module('myApp')
         },
         controllerAs: '$ctrl',
         controller: angular.noop,
-        template: [
-            '<div class="ui card red">',
-            '<div class="content">',
-                '<div class="header">{{$ctrl.title}}</div>',
-                '<div class="meta">{{$ctrl.description || "default description"}}</div>',
-                '<div class="description">',
-                    '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                        'Ut enim ad minim veniam, quis nostrud exercitation.</p>',
-                '</div>',
-            '</div>',
-        '</div>'
-        ].join('')
+        template:
+            `<div class="ui card red">
+                <div class="content">
+                    <div class="header">{{$ctrl.title}}</div>
+                    <div class="meta">{{$ctrl.description || "default description"}}</div>
+                    <div class="description">
+                        <p>
+                            Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.
+                        </p>
+                    </div>
+                </div>
+            </div>`
     }
     
   });
